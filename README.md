@@ -1,2 +1,2 @@
 # K_means
-K means algorithm (clustering)
+K means++ algorithm (clustering)
