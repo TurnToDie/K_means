@@ -123,7 +123,9 @@ if __name__ == '__main__':
     clasters_centers = k_means.fit(X)
     if len(clasters_centers[0]) == 2:
         visualize(X,clasters_centers)
+    # если нужно сохранить модель (обученную)
     # saveModel(clasters_centers)
     dict_ = k_means.predict(X)
+    # средний диаметр кластера
     avg_diam = np.average([max([np.linalg.norm(el[0]-el[1]) for el in itertools.combinations(dict_[k],2)]) for k in range(num_clasters)])
-    print(avg_diam)
+    
